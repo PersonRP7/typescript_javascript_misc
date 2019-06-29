@@ -1,3 +1,5 @@
+The getCookie function is from the django documentation.
+
 function getCookie(name) {
     var cookieValue = null;
     if (document.cookie && document.cookie !== '') {
