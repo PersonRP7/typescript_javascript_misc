@@ -1,0 +1,15 @@
+.centerize{
+    margin-top: 50px;
+    text-align: center;
+}
+
+::-webkit-input-placeholder{
+    text-align: center;
+}
+
+.select_align{
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}

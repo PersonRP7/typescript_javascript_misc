@@ -1,0 +1,43 @@
+{% extends 'users/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 m-auto">
+        <h3 id="search_heading" class="text-center mb-3">Search titles</h3>
+        <div class="form-group">
+        <form method="POST">
+        {% csrf_token %}
+           <input autocomplete="off" type="text" class="form-control form-control-lg" id="search" name='search' placeholder="Enter title name">
+
+          <div>
+            
+            <div class="select_align">
+              Select a filter:
+            </div>
+
+              <select class="select_align" id="search_filter">
+                <option value="None">None</option>
+                <option value="title">Title</option>
+                <option value="username">Username</option>
+              </select>
+          </div>
+
+           <div class="centerize">
+            <button type="submit" id='post_button' class="btn btn-outline-success">Search</button>
+           </div>
+        </div>
+        </form>
+        <div id="match-list">
+  
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}
+
+{% block script %}
+    <link rel="stylesheet" href="{% static 'rest/rest.css' %}">
+    <script type='module' src="{% static 'rest/autocomplete.js' %}"></script>
+{% endblock script %}
